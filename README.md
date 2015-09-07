@@ -23,8 +23,7 @@ In this exercise, we going to go deeper into the concept of *association*, in pa
 
 ## Assocation Review: Belongs To
 
-In the Code Along at the beginning of this unit, we associated instance of the Person class to one another through a `get_married` method. Let's re-visit that here: 
-
+We could imagine two instances of the `Person` class becoming associated to one another through a relationship like marriage. Let's say we have a `get_married` instance method that is called on an instance of `Person`, takes in an argument of another `Person` instance and associates those two instances to one another. Take a look at the code below: 
 
 ```ruby
 class Person 
@@ -40,7 +39,7 @@ class Person
   end
 ```
 
-Now, with those code, we can do the following:
+Now, we can do the following:
 
 ```ruby
 beyonce = Person.new("Beyonce")
@@ -60,7 +59,7 @@ Let's take a look at another example. This time, we'll build it out together:
 
 ## Code Along I: Has Many and Belongs To
 
-***This is a code along exercise! Fork and clone this lab by clicking the "view on github" link at the top of the page**. There are no tests, just follow along with this walk-through to get your code working. 
+***This is a code along exercise! Fork and clone this lab by clicking the "view on github" link at the top of the page***. There are no tests, just follow along with this walk-through to get your code working. 
 
 For this domain model we're taking a small trip back in time, to the '90s. We have two classes––`NinetiesTeen` and `CD`. Our `NinetiesTeen`agers will have the ability to have a CD collection. So, a teen will have many CDs and a CD will belong to a teen. This exercise introduces a new(ish) association for us––the "has many" association. In fact, we've seen this before. In a previous lab we built an `Owner` class and a `Pet` class. Owners had a collection of pets and individual pets could belong to an owner. 
 
@@ -310,7 +309,7 @@ class NinetiesTeen
     cd.teen = self
     new_coupon = Coupon.new
     cd.coupon = new_coupon
-    coupon.cd = cd
+    new_coupon.cd = cd
   end
 end
 ```
